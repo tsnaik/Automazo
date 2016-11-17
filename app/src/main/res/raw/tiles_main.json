@@ -1,0 +1,9 @@
+{ "tilesmain" : [
+  {"name":"Recipes","icon":"ic_restore_white_24dp"},
+  {"name":"Add Recipe","icon":"ic_restore_white_24dp"},
+  {"name":"Settings","icon":"ic_restore_white_24dp"},
+  {"name":"Templates","icon":"ic_restore_white_24dp"},
+  {"name":"Import/Export","icon":"ic_restore_white_24dp"}
+]
+
+}

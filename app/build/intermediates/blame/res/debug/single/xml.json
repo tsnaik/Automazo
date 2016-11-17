@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_data_sync.xml",
+        "source": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\src\\main\\res\\xml\\pref_data_sync.xml"
+    },
+    {
+        "merged": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_general.xml",
+        "source": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\src\\main\\res\\xml\\pref_general.xml"
+    },
+    {
+        "merged": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_headers.xml",
+        "source": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\src\\main\\res\\xml\\pref_headers.xml"
+    },
+    {
+        "merged": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\build\\intermediates\\res\\merged\\debug\\xml\\pref_notification.xml",
+        "source": "E:\\Codes\\sem7\\MAD Project\\other\\12 Nov\\Automazo\\app\\src\\main\\res\\xml\\pref_notification.xml"
+    }
+]

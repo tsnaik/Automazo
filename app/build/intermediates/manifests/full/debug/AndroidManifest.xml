@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.wecodelicious.automazo"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+        <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+        <activity android:name="net.wecodelicious.automazo.ui.MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="net.wecodelicious.automazo.util.Controller"
+            android:exported="false" />
+        <service
+            android:name="net.wecodelicious.automazo.actions.Notifications"
+            android:exported="false" />
+
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.AirplaneModeReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.GpsChangeReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.location.PROVIDERS_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.HotspotChangeReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.net.wifi.WIFI_AP_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.BTStateChangeReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.BTConnectionChangeReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED" />
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.RingerModeChangeReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.media.RINGER_MODE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="net.wecodelicious.automazo.triggers.AppInstalledRemovedReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name="net.wecodelicious.automazo.ui.View_Recipe" />
+        <activity
+            android:name="net.wecodelicious.automazo.ui.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name="net.wecodelicious.automazo.ui.View_Templates" />
+        <activity android:name="net.wecodelicious.automazo.ui.Add_Recipe" />
+    </application>
+
+</manifest>
