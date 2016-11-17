@@ -1,5 +1,6 @@
 package net.wecodelicious.automazo.ui;
 
+import android.app.Notification;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,10 +9,12 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import net.wecodelicious.automazo.actions.Flashlight;
 import net.wecodelicious.automazo.constraints.Constraints;
 import net.wecodelicious.automazo.R;
 import net.wecodelicious.automazo.triggers.AirplaneModeReceiver;
@@ -53,10 +56,17 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        /*Intent intent2;
 
-Constraints c = new Constraints();
+         intent2 = new Intent(this, Notification.class);
+intent2.setAction("XYZ");
+        startService(intent2);
+*/
+      //  Log.d("flash","main ma");
 
-        boolean b ;
+        Constraints c = new Constraints();
+
+      /*  boolean b ;
         b =  c.check("AirplaneMode",this,null);
         Toast.makeText(this,"Airplanemode : "+b,Toast.LENGTH_LONG).show();
         b =  c.check("AutoRotate",this,null);
@@ -71,12 +81,12 @@ Constraints c = new Constraints();
         b = c.check("Bluetooth",this,new Object[]{"enabled"});
         Toast.makeText(this,"Bluetooth : "+b,Toast.LENGTH_LONG).show();
 
-        b=c.check("CalenderEvent",this,new Object[]{"namestartdateenddatedescriptionlocation","xyz",new Date(50000),new Date(500000),null,null});
-        Toast.makeText(this,"CalenderEvent : "+b,Toast.LENGTH_LONG).show();
+//        b=c.check("CalenderEvent",this,new Object[]{"namestartdateenddatedescriptionlocation","xyz",new Date(50000),new Date(500000),null,null});
+  //      Toast.makeText(this,"CalenderEvent : "+b,Toast.LENGTH_LONG).show();
 
         b= c.check("CalenderUtil",this,new Object[]{"dayofweek",1});
         Toast.makeText(this,"Sunday : "+ b ,Toast.LENGTH_LONG).show();
-
+*/
 
         //DevicePolicyManager dpm = (DevicePolicyManager) this.getSystemService(Context.DEVICE_POLICY_SERVICE);
         //dpm.lockNow();

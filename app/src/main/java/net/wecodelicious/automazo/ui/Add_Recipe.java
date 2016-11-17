@@ -1,4 +1,4 @@
-package net.wecodelicious.automazo;
+package net.wecodelicious.automazo.ui;
 
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -13,6 +13,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import net.wecodelicious.automazo.R;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

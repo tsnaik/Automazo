@@ -57,12 +57,13 @@ public class Controller extends IntentService {
         for ( String action: actionnames) {
             Intent intent2 = null;
             try {
-                intent2 = new Intent(context,context.getClass().forName( "net.wecodelicious.automazo.actions."+action));
+                intent2 = new Intent(context,context.getClass().forName( "net.wecodelicious.automazo.actions.Brightness"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
             intent2.setAction(eventname);
-            Object[] objects = null;
+            Object[] objects = new Object[1];
+            objects[0] = 255;
             intent2.putExtra("params",(Serializable)objects);
             startService(intent2);
         }
